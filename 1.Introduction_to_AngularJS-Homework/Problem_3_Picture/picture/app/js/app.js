@@ -1,0 +1,1 @@
+var pic = angular.module('pic', []);

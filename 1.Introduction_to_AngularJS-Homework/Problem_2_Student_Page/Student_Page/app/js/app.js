@@ -1,0 +1,1 @@
+var  studenPage = angular.module('studenPage', []);

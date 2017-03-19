@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bind Image Source to Text Box</title>
+</head>
+<body ng-app="picModule">
+<h1>PIC from URL</h1>
+<div ng-controller="bindImageCtrl">
+	<input type="text" name="pic url" size="61" ng-value="picUrl" ng-model="picUrl"><br/>
+	<img width="400" ng-src="{{picUrl}}"/>
+</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<!--
+		<script src="lib/angular/angular.js"></script>
+    -->
+    <script>
+    	var picModule = angular.module('picModule', []);
+    	function getUrl($scope){
+			var picUrl = "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg";
+			$scope.picUrl = picUrl;
+		}
+		picModule.controller('bindImageCtrl', getUrl);
+    </script>
+    
+</body>
+</html>

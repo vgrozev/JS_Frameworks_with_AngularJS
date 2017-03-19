@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+ 	<title>Video System</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="vSystemModule">
+<div class="container">
+	<div></br>
+		Sort By:
+		<select ng-model="sortMajigar">
+			<option selected value=""></option>
+			<option value="title">Title</option>
+			<option value="length">Length</option>
+			<option value="date">Date</option>
+			<option value="comments.likes">likes</option>
+		</select>
+		Filter By Category:
+		<select ng-model="filterMajigar.category">
+			<option selected value="">All</option>
+			<option value="IT">IT</option>
+			<option value="Regular">Regular</option>
+			<option value="Action">Action</option>
+			<option value="TTT">TTT</option>
+			<option value="Comedy">Comedy</option>
+		</select>
+
+		<!-- <label>Filter by date:</label>
+    	<input type="input" ng-model="filterMajigar.date" /> -->
+    	
+	</div>
+	<h1>Video System</h1>
+	<!-- <div ng-controller="vSystemCtrl" style="display: flex; justify-content: space-around;">  -->
+	<div ng-controller="vSystemCtrl">
+		<div ng-repeat="dataObj in vSystemData | orderBy:sortMajigar | filter:filterMajigar" style="display: inline-block; margin: 20px 10px;">
+
+			<h4 style="text-align:center">{{dataObj.title | uppercase}}</h4>
+			<p></p><br>
+				<img ng-src={{dataObj.pictureUrl}} width="200"/>
+			</p>
+			<p>Length: {{dataObj.length}}</p>
+			<p>Category: {{dataObj.category}}</p>
+			<p>Subscribers: {{dataObj.subscribers}}</p>
+			<p>Date: {{dataObj.date | date: 'dd MMM yyyy'}}</p>
+			<p ng-show="dataObj.haveSubtitles">Yes</p>
+			<p ng-hide="dataObj.haveSubtitles">No</p>
+			<h>-------------------------</h>
+			<p>Comments:</p>
+				<div ng-repeat="cmnt in dataObj.comments" > 
+						<p>Username: {{cmnt.username}}</p>
+						<p>Content: {{cmnt.content}}</p>
+						<p>Date: {{cmnt.date}}</p>
+						<p>Likes: {{cmnt.likes}}</p>
+						<p>Url: 
+							<a href="{{cmnt.websiteUrl}}">{{cmnt.username}}</a>
+						</p>
+
+						</br>
+						<h>*****</h>
+				</div>
+		</div>
+	</div>
+</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <script src="controllers.js"></script>
+    
+</body>
+</html>
