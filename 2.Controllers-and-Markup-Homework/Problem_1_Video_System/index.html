@@ -11,15 +11,32 @@
 <body ng-app="vSystemModule">
 <div class="container">
 	<div></br>
-		Sort By:
+		Add new Video (fields with asterisks are required):
+		<form name="addVideoForm">
+			Title:
+			<input type="text" required ng-model="vSystemData.title">
+			Category:
+			<input type="text" required ng-model="vSystemData.category">
+			Cover pic URL:
+			<input type="text" required ng-model="vSystemData.pictureUrl">
+			<button ng-click="submit(vSystemData)">Submit</button>
+
+
+		</form>
+		</br>
+			<h>--------------------------------------------</h>
+		</br>
+
+
+		<span>Sort By: </span>
 		<select ng-model="sortMajigar">
-			<option selected value=""></option>
+			<option selected value="">All</option>
 			<option value="title">Title</option>
 			<option value="length">Length</option>
-			<option value="date">Date</option>
-			<option value="comments.likes">likes</option>
+			<option value="-date">Date</option>
+			<option value="-subscribers">Subscribers</option>
 		</select>
-		Filter By Category:
+		<span style="margin-left: 10px">Filter By Category: </span>  
 		<select ng-model="filterMajigar.category">
 			<option selected value="">All</option>
 			<option value="IT">IT</option>
@@ -28,10 +45,16 @@
 			<option value="TTT">TTT</option>
 			<option value="Comedy">Comedy</option>
 		</select>
+		<span style="margin-left: 10px">Filter by date (type year): </span> 
+		<input type="text" ng-model="filterMajigar.date"\>
 
-		<!-- <label>Filter by date:</label>
-    	<input type="input" ng-model="filterMajigar.date" /> -->
-    	
+		<span style="margin-left: 10px">Filter by having subtitles: </span> 
+		<select ng-model="filterMajigar.haveSubtitles">
+			<option selected value="">All</option>
+			<option value="true">With Subtitles</option>
+			<option value="false">No Subtitles</option>
+		</select>
+
 	</div>
 	<h1>Video System</h1>
 	<!-- <div ng-controller="vSystemCtrl" style="display: flex; justify-content: space-around;">  -->
@@ -67,6 +90,7 @@
 </div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+	<script src="videoSystem.js"></script>
     <script src="controllers.js"></script>
     
 </body>

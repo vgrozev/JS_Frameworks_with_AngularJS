@@ -1,0 +1,1 @@
+var vSystemModule = angular.module('vSystemModule', []);

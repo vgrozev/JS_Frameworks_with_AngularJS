@@ -1,4 +1,3 @@
-var vSystemModule = angular.module('vSystemModule', []);
 
 function vObjects($scope){
 	$scope.vSystemData = [{
@@ -38,7 +37,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/6.jpg',
 								length: '6:52',
 								category: 'Comedy',
-								subscribers: 3,
+								subscribers: 13,
 								date: new Date(2016, 12, 30),
 								haveSubtitles: true,
 								comments: [
@@ -70,7 +69,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/5.jpg',
 								length: '4:37',
 								category: 'IT',
-								subscribers: 3,
+								subscribers: 33,
 								date: new Date(2012, 12, 20),
 								haveSubtitles: false,
 								comments: [
@@ -132,9 +131,9 @@ function vObjects($scope){
 							{
 								title: 'Course blaval move',
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/6.jpg',
-								length: '6:52',
+								length: '16:52',
 								category: 'TTT',
-								subscribers: 3,
+								subscribers: 34,
 								date: new Date(2017, 12, 30),
 								haveSubtitles: false,
 								comments: [
@@ -166,7 +165,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/5.jpg',
 								length: '4:37',
 								category: 'Action',
-								subscribers: 3,
+								subscribers: 15,
 								date: new Date(2011, 12, 20),
 								haveSubtitles: false,
 								comments: [
@@ -196,7 +195,7 @@ function vObjects($scope){
 							{
 								title: 'Cour ction',
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg',
-								length: '3:32',
+								length: '3:38',
 								category: 'Action',
 								subscribers: 3,
 								date: new Date(2017, 12, 02),
@@ -228,9 +227,9 @@ function vObjects($scope){
 							{
 								title: 'Cse introduc',
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/6.jpg',
-								length: '6:52',
+								length: '6:55',
 								category: 'IT',
-								subscribers: 3,
+								subscribers: 30,
 								date: new Date(2000, 12, 30),
 								haveSubtitles: false,
 								comments: [
@@ -262,7 +261,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/5.jpg',
 								length: '4:37',
 								category: 'IT',
-								subscribers: 3,
+								subscribers: 31,
 								date: new Date(2007, 12, 20),
 								haveSubtitles: true,
 								comments: [
@@ -294,7 +293,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg',
 								length: '3:32',
 								category: 'Regular',
-								subscribers: 3,
+								subscribers: 32,
 								date: new Date(2005, 12, 02),
 								haveSubtitles: false,
 								comments: [
@@ -326,7 +325,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/6.jpg',
 								length: '6:52',
 								category: 'IT',
-								subscribers: 3,
+								subscribers: 83,
 								date: new Date(2003, 12, 30),
 								haveSubtitles: false,
 								comments: [
@@ -358,7 +357,7 @@ function vObjects($scope){
 								pictureUrl: 'http://www.joomlaworks.net/images/demos/galleries/abstract/5.jpg',
 								length: '4:37',
 								category: 'Comedy',
-								subscribers: 3,
+								subscribers: 93,
 								date: new Date(2001, 12, 20),
 								haveSubtitles: true,
 								comments: [
