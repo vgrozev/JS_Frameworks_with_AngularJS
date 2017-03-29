@@ -8,26 +8,27 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body ng-app="vSystemModule">
-<div class="container">
+<body ng-app="vSystemModule" >
+<div ng-controller="vSystemCtrl" class="container">
 	<div></br>
 		Add new Video (fields with asterisks are required):
-		<form name="addVideoForm">
-			Title:
-			<input type="text" required ng-model="vSystemData.title">
-			Category:
-			<input type="text" required ng-model="vSystemData.category">
-			Cover pic URL:
-			<input type="text" required ng-model="vSystemData.pictureUrl">
-			<button ng-click="submit(vSystemData)">Submit</button>
-
-
+		<form name="add_new" ng-submit="addNewV(video)">
+			Title *:
+			<input type="text" required ng-model="video.title"\>
+			Category *:
+			<input type="text" name="category" required ng-model="video.category"\>
+			Cover pic URL *:
+			<input type="url" name="urll" required ng-model="video.pictureUrl"\>
+			<span ng-show="add_new.urll.$error.url">This is not a valid url.</span> 
+			<button ng-click="" ng-disabled="add_new.$invalid">Submit</button> 
+					
 		</form>
+
 		</br>
 			<h>--------------------------------------------</h>
 		</br>
 
-
+ 
 		<span>Sort By: </span>
 		<select ng-model="sortMajigar">
 			<option selected value="">All</option>
@@ -58,8 +59,8 @@
 	</div>
 	<h1>Video System</h1>
 	<!-- <div ng-controller="vSystemCtrl" style="display: flex; justify-content: space-around;">  -->
-	<div ng-controller="vSystemCtrl">
-		<div ng-repeat="dataObj in vSystemData | orderBy:sortMajigar | filter:filterMajigar" style="display: inline-block; margin: 20px 10px;">
+	<div>
+		<div ng-repeat="dataObj in vSystemData | orderBy:sortMajigar | filter:filterMajigar track by $index" style="display: inline-block; margin: 20px 10px;">
 
 			<h4 style="text-align:center">{{dataObj.title | uppercase}}</h4>
 			<p></p><br>
@@ -92,6 +93,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
 	<script src="videoSystem.js"></script>
     <script src="controllers.js"></script>
-    
+    <script src="services.js"></script>
 </body>
 </html>
