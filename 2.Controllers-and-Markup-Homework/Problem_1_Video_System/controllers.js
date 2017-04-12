@@ -30,10 +30,9 @@ function vObjects($scope, vDataService){
 										websiteUrl: ''
 									}
 						];
-		$scope.vSystemData.push(video);
-		// var frm = document.getElementsByName('add_new')[0];
-		// frm.;  // Reset
-  //  		return false; // Prevent page refresh
+		$scope.vSystemData.push(this.video);
+	
+		document.getElementsByName('add_new')[0].reset();  // Reset
 	};
 
 };

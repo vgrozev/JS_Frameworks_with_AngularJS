@@ -1,4 +1,8 @@
-vSystemModule.service("vDataService", function(){
+
+
+
+
+function ddaattaa(){
 		this.getData = function(){
 			return [
 							{
@@ -389,4 +393,6 @@ vSystemModule.service("vDataService", function(){
 	];
 };
 
-});
+}
+
+vSystemModule.service("vDataService", ddaattaa);
