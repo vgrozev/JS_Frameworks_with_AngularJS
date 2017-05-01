@@ -1,4 +1,16 @@
 /* app css stylesheet */
+body {
+  margin-top: 60px;
+}
+
+.border {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.margin-bottom-100 {
+  margin-bottom: 100px;
+}
 
 .menu {
   list-style: none;
@@ -8,19 +20,19 @@
 }
 
 .hidden-element {
-    display: none;
+  display: none;
 }
 
 .disabled-button {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .small-image {
-    width: 250px;
+  width: 250px;
 }
 
 input.ng-invalid.ng-dirty {
-    background-color: pink;
+  background-color: pink;
 }
 
 .menu:before {
