@@ -13,11 +13,16 @@ angular.module('socialNetwork.users.authentication', [])
 			var deferred = $q.defer();
 
 			$http.post(BASE_URL + 'users/Register', user)
-				.then(function(response){
-					deferred.resolve(response.data)
-				}, function(error){
+				.then(
+					function(response){
+						deferred.resolve(response.data)
+						
+					}, 
+					function(error){
 
-				});
+					}
+				);
+
 			return deferred.promise;
 
 		}
@@ -26,12 +31,15 @@ angular.module('socialNetwork.users.authentication', [])
 			var deferred = $q.defer();
 
 			$http.post(BASE_URL + 'users/Login', user)
-				.then(function(response){
-					deferred.resolve(response.data)
+				.then(
+					function(response){
+						console.log(response.data);
+						deferred.resolve(response.data);
+					}, 
+					function(error){
 
-				}, function(error){
-
-				});
+					}
+				);
 
 			return deferred.promise;
 		}
